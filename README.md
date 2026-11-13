@@ -6,7 +6,7 @@ A bilingual PDF workspace with page-aware extraction, summaries and grounded Q&A
 React + TypeScript + Vite + Tailwind CSS; Node.js + Express; PDF.js; OpenAI-compatible AI provider.
 
 ## Run locally
-Requires Node.js 20+.
+Requires Node.js 22+.
 
 ```bash
 cp .env.example .env
