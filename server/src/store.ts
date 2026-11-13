@@ -1,0 +1,1 @@
+import type {DocumentRecord} from './types.js';const records=new Map<string,DocumentRecord>();export const documentStore={all:()=>Array.from(records.values()).sort((a,b)=>b.uploadedAt.localeCompare(a.uploadedAt)),get:(id:string)=>records.get(id),add:(d:DocumentRecord)=>records.set(d.id,d),delete:(id:string)=>records.delete(id)};
