@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports: ["4000:4000"]
+    env_file: .env
+    environment:
+      PORT: 4000
+      UPLOAD_DIR: /app/uploads
+    volumes: ["pdf_uploads:/app/uploads"]
+volumes:
+  pdf_uploads:
