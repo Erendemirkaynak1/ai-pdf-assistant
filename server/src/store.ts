@@ -29,6 +29,6 @@ function persist(){
 export const documentStore={
   all:()=>Array.from(records.values()).sort((a,b)=>b.uploadedAt.localeCompare(a.uploadedAt)),
   get:(id:string)=>records.get(id),
-  add:(d:DocumentRecord)=>{records.set(d.id,d);persist();},
-  delete:(id:string)=>{const changed=records.delete(id);if(changed)persist();return changed;}
+  add:(d:DocumentRecord)=>{const previous=records.get(d.id);records.set(d.id,d);try{persist();}catch(error){if(previous)records.set(d.id,previous);else records.delete(d.id);throw error;}},
+  delete:(id:string)=>{const previous=records.get(id);if(!previous)return false;records.delete(id);try{persist();return true;}catch(error){records.set(id,previous);throw error;}}
 };
