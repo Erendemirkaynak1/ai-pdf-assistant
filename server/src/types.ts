@@ -1,0 +1,1 @@
+export type PageText={page:number;text:string};export type DocumentRecord={id:string;name:string;size:number;pages:number;uploadedAt:string;path:string;pageTexts:PageText[]};
