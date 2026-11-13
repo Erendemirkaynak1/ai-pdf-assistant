@@ -1,5 +1,5 @@
 import{useEffect,useRef,useState}from'react';
-import{FileText,Upload,Search,Trash2,Moon,Sun,Send,Download,Sparkles,MessageSquare,BookOpen,Loader2,Languages,CheckSquare,Menu,X,ArrowUpRight,Files,PanelLeft,ShieldCheck,FilePlus2,Command,ChevronRight,CloudUpload,Lightbulb}from'lucide-react';
+import{FileText,Upload,Search,Trash2,Moon,Sun,Send,Download,Sparkles,MessageSquare,BookOpen,Loader2,Languages,CheckSquare,Menu,X,ArrowUpRight,Files,PanelLeft,ShieldCheck,FilePlus2,ChevronRight,CloudUpload,Lightbulb}from'lucide-react';
 import{api,type Doc}from'./api';
 import PDFPreview from'./PDFPreview';
 
